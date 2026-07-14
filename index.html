@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>منزل الحكمة | مجمع طبي متخصص في الطب البديل</title>
+<meta name="description" content="مجمع منزل الحكمة للطب البديل — رعاية تكاملية حديثة تجمع بين الطب النبوي وأحدث تقنيات العلاج الطبيعي." />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+
+<!-- Swiper (مكتبة السلايدر) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Lucide (مكتبة الأيقونات) -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-ink font-body">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-4 inset-x-0 z-50 px-4">
+  <div id="site-header-bar" class="mx-auto max-w-6xl grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-full bg-white border border-border shadow-[0_10px_30px_-15px_rgba(12,35,64,0.25)] px-3 sm:px-5 py-2.5 transition-shadow duration-300">
+    <a href="index.html" class="gap-3 min-w-0">
+      <img src="images/logo/logo-blue.png" alt="منزل الحكمة" class="h-12 w-32 rounded-xl" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center justify-center gap-8 text-sm font-medium text-ink/80">
+      <a href="index.html" class="relative hover:text-teal transition group whitespace-nowrap">
+        الرئيسية
+        <span class="absolute -bottom-1.5 right-0 h-px w-0 bg-teal group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="doctors.html" class="relative hover:text-teal transition group whitespace-nowrap">
+        الأطباء
+        <span class="absolute -bottom-1.5 right-0 h-px w-0 bg-teal group-hover:w-full transition-all duration-300"></span>
+      </a>
+
+      <a href="index.html#services" class="relative hover:text-teal transition group whitespace-nowrap">
+        خدماتنا
+        <span class="absolute -bottom-1.5 right-0 h-px w-0 bg-teal group-hover:w-full transition-all duration-300"></span>
+      </a>
+
+      <a href="contact.html" class="relative hover:text-teal transition group whitespace-nowrap">
+        اتصل بنا
+        <span class="absolute -bottom-1.5 right-0 h-px w-0 bg-teal group-hover:w-full transition-all duration-300"></span>
+      </a>
+    </nav>
+
+    <!-- ============ MOBILE MENU ============ -->
+    <div id="mobile-menu" class="lg:hidden fixed top-[85px] inset-x-4 z-40">
+      <nav class="rounded-3xl bg-white border border-border shadow-[0_25px_60px_-20px_rgba(12,35,64,0.3)] p-3 space-y-1 text-ink">
+        <a href="index.html" class="flex items-center gap-3 rounded-xl px-4 py-3.5 font-semibold hover:bg-primary-soft/50 hover:text-teal transition">
+          <i data-lucide="home" class="h-4 w-4"></i> الرئيسية
+        </a>
+        <a href="doctors.html" class="flex items-center gap-3 rounded-xl px-4 py-3.5 font-semibold hover:bg-primary-soft/50 hover:text-teal transition">
+          <i data-lucide="stethoscope" class="h-4 w-4"></i> الأطباء
+        </a>
+        <a href="index.html#services" class="flex items-center gap-3 rounded-xl px-4 py-3.5 font-semibold hover:bg-primary-soft/50 hover:text-teal transition">
+          <i data-lucide="sparkles" class="h-4 w-4"></i> خدماتنا
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 rounded-xl px-4 py-3.5 font-semibold hover:bg-primary-soft/50 hover:text-teal transition">
+          <i data-lucide="phone" class="h-4 w-4"></i> اتصل بنا
+        </a>
+
+        <div class="pt-2 mt-1 border-t border-border">
+          <a href="booking.html" class="flex items-center justify-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-4 py-3.5 text-sm font-bold shadow-md">
+            احجز موعدك
+            <i data-lucide="arrow-left" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="justify-self-end flex items-center gap-2">
+      <a href="booking.html" class="hidden lg:inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-4 py-2 text-sm font-bold shadow-md hover:brightness-110 transition whitespace-nowrap">
+        احجز موعدك
+        <i data-lucide="arrow-left" class="h-4 w-4"></i>
+      </a>
+      <!-- Burger Button (Mobile) -->
+      <button id="burger-btn" aria-label="فتح القائمة" class="lg:hidden h-10 w-10 rounded-full bg-primary-soft/60 text-teal grid place-items-center shrink-0">
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative pt-24 pb-8 overflow-hidden bg-gradient-to-b from-[#e8f2f7] via-[#d9ecf2] to-[#e8f2f2]">
+  <div class="absolute inset-0 opacity-[0.08] pointer-events-none pattern-layer invert"></div>
+  <div class="absolute -top-24 right-1/4 h-[380px] w-[380px] rounded-full bg-seafoam/30 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-24 left-1/4 h-[380px] w-[380px] rounded-full bg-teal/25 blur-3xl pointer-events-none"></div>
+
+  <div class="container-x relative">
+    <div class="swiper hero-swiper h-[82vh] min-h-[560px] max-h-[720px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide hero-slide relative overflow-hidden">
+          <div class="absolute inset-0">
+            <img src="images/hero-2.png" alt="" class="hero-slide-img absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-l from-[#0c2340]/55 via-[#1a4a6e]/30 to-[#5cbdb9]/10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c2340]/45 via-transparent to-transparent"></div>
+          </div>
+          <div class="relative h-full px-8 md:px-14 flex items-center">
+            <div class="max-w-2xl text-white">
+              <div data-swiper-parallax="-120" class="divider-ornate text-[11px] uppercase tracking-[.4em] font-semibold text-seafoam">الرعاية التكاملية الحديثة</div>
+              <h1 data-swiper-parallax="-200" class="mt-6 font-display text-4xl md:text-6xl lg:text-7xl font-black !text-white leading-[1.05]">
+                <span class="md:whitespace-nowrap">حكمة أصيلة</span><br />
+                <span class="shimmer-text md:whitespace-nowrap">بلمسة طبية</span>
+              </h1>
+              <p data-swiper-parallax="-280" class="mt-6 text-base md:text-lg text-white/80 leading-loose max-w-lg font-light">
+                نجمع بين موروث الطب النبوي وأحدث تقنيات العلاج الطبيعي — في بيئة راقية تشعر فيها بالطمأنينة منذ الخطوة الأولى، على أيدي نخبة من الأطباء المتخصصين.
+              </p>
+              <div data-swiper-parallax="-360" class="mt-6 flex flex-wrap items-center gap-4">
+                <a href="contact.html" class="group inline-flex items-center gap-3 rounded-full bg-seafoam text-ink px-7 py-3.5 font-bold shadow-xl hover:bg-white transition">
+                  احجز جلستك الآن
+                  <span class="h-7 w-7 rounded-full bg-ink/10 grid place-items-center group-hover:-translate-x-1 transition"><i data-lucide="arrow-left" class="h-4 w-4"></i></span>
+                </a>
+                <a href="#about" class="inline-flex items-center gap-3 text-white/90 hover:text-white transition font-semibold">
+                  <i data-lucide="play-circle" class="h-7 w-7"></i> تعرّف علينا
+                </a>
+              </div>
+              <div data-swiper-parallax="-440" class="mt-8 inline-flex items-center gap-3 glass-dark rounded-2xl px-4 py-2">
+                <span class="h-2.5 w-2.5 rounded-full bg-seafoam animate-pulse"></span>
+                <span class="text-sm text-white/90 font-medium">الفريق الطبي</span>
+              </div>
+            </div>
+          </div>
+          <div class="hidden xl:flex absolute bottom-16 left-8 flex-col gap-3 z-10">
+            <div class="glass-dark rounded-2xl p-4 w-56 float-y">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-seafoam/25 grid place-items-center"><i data-lucide="award" class="h-5 w-5 text-seafoam"></i></div>
+                <div><div class="text-xl font-black text-white">98%</div><div class="text-xs text-white/70">رضا المرضى</div></div>
+              </div>
+            </div>
+            <div class="glass-dark rounded-2xl p-4 w-56 float-y-delay">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-white/15 grid place-items-center"><i data-lucide="users" class="h-5 w-5 text-white"></i></div>
+                <div><div class="text-xl font-black text-white">+5,000</div><div class="text-xs text-white/70">مريض تمت خدمته</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide hero-slide relative overflow-hidden">
+          <div class="absolute inset-0">
+            <img src="images/location/loc-1.png" alt="" class="hero-slide-img absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-l from-[#0c2340]/55 via-[#1a4a6e]/30 to-[#5cbdb9]/10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c2340]/45 via-transparent to-transparent"></div>
+          </div>
+          <div class="relative h-full px-8 md:px-14 flex items-center">
+            <div class="max-w-2xl text-white">
+              <div data-swiper-parallax="-120" class="divider-ornate text-[11px] uppercase tracking-[.4em] font-semibold text-seafoam">بيئة علاجية استثنائية</div>
+              <h1 data-swiper-parallax="-200" class="mt-6 font-display text-4xl md:text-6xl lg:text-7xl font-black !text-white leading-[1.05]">
+                تفاصيل تُروى<br /><span class="shimmer-text">بعناية فائقة</span>
+              </h1>
+              <p data-swiper-parallax="-280" class="mt-6 text-base md:text-lg text-white/80 leading-loose max-w-lg font-light">
+                مساحات مصمّمة بذوق رفيع، أدوات معقّمة حديثة، وأيدٍ متخصصة تجعل من زيارتك تجربة تعافي شاملة.
+              </p>
+              <div data-swiper-parallax="-360" class="mt-6 flex flex-wrap items-center gap-4">
+                <a href="contact.html" class="group inline-flex items-center gap-3 rounded-full bg-seafoam text-ink px-7 py-3.5 font-bold shadow-xl hover:bg-white transition">
+                  احجز جلستك الآن
+                  <span class="h-7 w-7 rounded-full bg-ink/10 grid place-items-center group-hover:-translate-x-1 transition"><i data-lucide="arrow-left" class="h-4 w-4"></i></span>
+                </a>
+                <a href="#about" class="inline-flex items-center gap-3 text-white/90 hover:text-white transition font-semibold">
+                  <i data-lucide="play-circle" class="h-7 w-7"></i> تعرّف علينا
+                </a>
+              </div>
+              <div data-swiper-parallax="-440" class="mt-8 inline-flex items-center gap-3 glass-dark rounded-2xl px-4 py-2">
+                <span class="h-2.5 w-2.5 rounded-full bg-seafoam animate-pulse"></span>
+                <span class="text-sm text-white/90 font-medium">من داخل المركز</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide hero-slide relative overflow-hidden">
+          <div class="absolute inset-0">
+            <img src="images/location/loc-5.png" alt="" class="hero-slide-img absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-l from-[#0c2340]/55 via-[#1a4a6e]/30 to-[#5cbdb9]/10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c2340]/45 via-transparent to-transparent"></div>
+          </div>
+          <div class="relative h-full px-8 md:px-14 flex items-center">
+            <div class="max-w-2xl text-white">
+              <div data-swiper-parallax="-120" class="divider-ornate text-[11px] uppercase tracking-[.4em] font-semibold text-seafoam">قسم متكامل للسيدات</div>
+              <h1 data-swiper-parallax="-200" class="mt-6 font-display text-4xl md:text-6xl lg:text-7xl font-black !text-white leading-[1.05]">
+                خصوصية تليق بك<br /><span class="shimmer-text">بأيدٍ نسائية خبيرة</span>
+              </h1>
+              <p data-swiper-parallax="-280" class="mt-6 text-base md:text-lg text-white/80 leading-loose max-w-lg font-light">
+                جناح مستقل مخصّص للسيدات بكادر طبي نسائي، لتجربة علاجية آمنة تحفظ الخصوصية وترتقي بالتجربة.
+              </p>
+              <div data-swiper-parallax="-360" class="mt-6 flex flex-wrap items-center gap-4">
+                <a href="contact.html" class="group inline-flex items-center gap-3 rounded-full bg-seafoam text-ink px-7 py-3.5 font-bold shadow-xl hover:bg-white transition">
+                  احجز جلستك الآن
+                  <span class="h-7 w-7 rounded-full bg-ink/10 grid place-items-center group-hover:-translate-x-1 transition"><i data-lucide="arrow-left" class="h-4 w-4"></i></span>
+                </a>
+                <a href="#about" class="inline-flex items-center gap-3 text-white/90 hover:text-white transition font-semibold">
+                  <i data-lucide="play-circle" class="h-7 w-7"></i> تعرّف علينا
+                </a>
+              </div>
+              <div data-swiper-parallax="-440" class="mt-8 inline-flex items-center gap-3 glass-dark rounded-2xl px-4 py-2">
+                <span class="h-2.5 w-2.5 rounded-full bg-seafoam animate-pulse"></span>
+                <span class="text-sm text-white/90 font-medium">قسم السيدات</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUES ============ -->
+<section class="py-20 relative overflow-hidden bg-primary-soft/30">
+  <div class="container-x relative">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">لماذا منزل الحكمة</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">معايير رعاية <span class="text-gradient-primary">بمستوى مختلف</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+      <div class="reveal group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-teal/15 hover:border-teal/40 transition-all duration-500 hover:shadow-[0_20px_60px_-20px_rgba(45,138,158,0.35)] hover:-translate-y-2 overflow-hidden">
+        <div class="absolute top-0 right-0 h-1 w-0 group-hover:w-full bg-gradient-to-l from-seafoam to-teal transition-all duration-500"></div>
+        <div class="absolute top-5 left-5 text-6xl font-display font-bold text-teal/10 group-hover:text-teal/25 transition">01</div>
+        <div class="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-teal to-seafoam text-white grid place-items-center mb-6 shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+          <i data-lucide="star" class="h-7 w-7"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-ink">رعاية بذائقة عالية</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">تجربة راقية بأدق التفاصيل من الاستقبال حتى ختام الجلسة.</p>
+      </div>
+      <div class="reveal group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-teal/15 hover:border-teal/40 transition-all duration-500 hover:shadow-[0_20px_60px_-20px_rgba(45,138,158,0.35)] hover:-translate-y-2 overflow-hidden">
+        <div class="absolute top-0 right-0 h-1 w-0 group-hover:w-full bg-gradient-to-l from-seafoam to-teal transition-all duration-500"></div>
+        <div class="absolute top-5 left-5 text-6xl font-display font-bold text-teal/10 group-hover:text-teal/25 transition">02</div>
+        <div class="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-teal to-seafoam text-white grid place-items-center mb-6 shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+          <i data-lucide="building-2" class="h-7 w-7"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-ink">بيئة صحية نظيفة</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">منشأة معقّمة وفق أعلى معايير الجودة والسلامة الطبية.</p>
+      </div>
+      <div class="reveal group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-teal/15 hover:border-teal/40 transition-all duration-500 hover:shadow-[0_20px_60px_-20px_rgba(45,138,158,0.35)] hover:-translate-y-2 overflow-hidden">
+        <div class="absolute top-0 right-0 h-1 w-0 group-hover:w-full bg-gradient-to-l from-seafoam to-teal transition-all duration-500"></div>
+        <div class="absolute top-5 left-5 text-6xl font-display font-bold text-teal/10 group-hover:text-teal/25 transition">03</div>
+        <div class="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-teal to-seafoam text-white grid place-items-center mb-6 shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+          <i data-lucide="droplet" class="h-7 w-7"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-ink">أدوات معقّمة حديثة</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">أدوات ذات استخدام واحد وتقنيات مطوّرة لكل خدمة.</p>
+      </div>
+      <div class="reveal group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-teal/15 hover:border-teal/40 transition-all duration-500 hover:shadow-[0_20px_60px_-20px_rgba(45,138,158,0.35)] hover:-translate-y-2 overflow-hidden">
+        <div class="absolute top-0 right-0 h-1 w-0 group-hover:w-full bg-gradient-to-l from-seafoam to-teal transition-all duration-500"></div>
+        <div class="absolute top-5 left-5 text-6xl font-display font-bold text-teal/10 group-hover:text-teal/25 transition">04</div>
+        <div class="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-teal to-seafoam text-white grid place-items-center mb-6 shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+          <i data-lucide="shield-check" class="h-7 w-7"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-ink">فريق طبي معتمد</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">أطباء ومعالجون بخبرات طويلة في الطب البديل.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-20 bg-white relative overflow-hidden">
+  <div class="container-x grid lg:grid-cols-2 gap-16 items-center">
+    <div class="relative reveal">
+      <div class="absolute -top-8 -right-8 h-40 w-40 rounded-full bg-gold/15 blur-2xl"></div>
+      <div class="relative grid grid-cols-6 gap-3">
+        <div class="col-span-4 rounded-[2rem] overflow-hidden shadow-xl">
+          <img src="images/about-cups.jpg" alt="أدوات الحجامة" class="w-full aspect-[4/5] object-cover" />
+        </div>
+        <div class="col-span-2 flex flex-col gap-3">
+          <div class="rounded-[1.5rem] overflow-hidden shadow-lg">
+            <img src="images/location/loc-3.png" alt="" class="w-full aspect-square object-cover" />
+          </div>
+          <div class="rounded-[1.5rem] overflow-hidden shadow-lg flex-1">
+            <img src="images/location/loc-6.png" alt="" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+      <div class="absolute -bottom-8 -right-4 bg-white rounded-3xl shadow-2xl px-7 py-5 flex items-center gap-4 border border-border">
+        <div class="text-5xl font-display font-bold text-gradient-primary">+15</div>
+        <div class="text-sm text-muted-foreground leading-tight">سنة من الخبرة<br />في الطب البديل</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">من نحن</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">
+        منزل الحكمة…<br /><span class="text-gradient-primary">تجربة علاجية متكاملة</span>
+      </h2>
+      <p class="mt-7 text-lg text-muted-foreground leading-loose">
+        نحن مجمع طبي متخصص في الطب البديل والتكميلي، نجمع بين الحكمة النبوية العريقة وأحدث ما توصّل إليه العلاج الطبيعي الحديث. رسالتنا أن نقدّم لك رعاية شاملة في بيئة راقية تشعر فيها بالطمأنينة والاحترام.
+      </p>
+      <p class="mt-4 text-lg text-muted-foreground leading-loose">
+        فريقنا يعمل بأدوات معقّمة حديثة ووفق بروتوكولات علاجية مدروسة تناسب حالتك الفريدة.
+      </p>
+      <div class="grid grid-cols-3 gap-5 mt-10">
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-display font-bold text-ink">+5,000</div>
+          <div class="text-xs text-muted-foreground mt-1 tracking-widest uppercase">مريض</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-display font-bold text-ink">+15</div>
+          <div class="text-xs text-muted-foreground mt-1 tracking-widest uppercase">أخصائي</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-display font-bold text-ink">98%</div>
+          <div class="text-xs text-muted-foreground mt-1 tracking-widest uppercase">نسبة الرضا</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-20 relative overflow-hidden bg-white">
+  <div class="container-x relative">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">ما نقدّمه</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">خدمات علاجية <span class="text-gradient-primary">متكاملة</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-16">
+      <a href="booking.html" class="reveal group relative flex flex-col rounded-[1.75rem] bg-white border border-teal/12 p-7 overflow-hidden hover:shadow-[0_25px_60px_-25px_rgba(45,138,158,0.45)] hover:-translate-y-1.5 transition-all duration-500">
+        <div class="flex items-start justify-between mb-8">
+          <div class="relative h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500"><i data-lucide="droplet" class="h-6 w-6"></i></div>
+          <span class="text-xs font-mono tracking-[.3em] text-teal/60 mt-2">01</span>
+        </div>
+        <h3 class="text-xl font-display font-bold text-ink group-hover:text-primary-deep transition">الحجامة الجافة</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">تنشيط الدورة الدموية وتخفيف آلام العضلات.</p>
+        <div class="mt-6 pt-5 border-t border-dashed border-teal/20 flex items-center justify-between">
+          <span class="text-sm font-bold text-teal">احجز جلستك</span>
+          <span class="h-9 w-9 rounded-full bg-primary-soft group-hover:bg-teal grid place-items-center transition-all duration-300"><i data-lucide="arrow-left" class="h-4 w-4 text-teal group-hover:text-white transition"></i></span>
+        </div>
+      </a>
+      <a href="booking.html" class="reveal group relative flex flex-col rounded-[1.75rem] bg-white border border-teal/12 p-7 overflow-hidden hover:shadow-[0_25px_60px_-25px_rgba(45,138,158,0.45)] hover:-translate-y-1.5 transition-all duration-500">
+        <div class="flex items-start justify-between mb-8">
+          <div class="relative h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500"><i data-lucide="heart-pulse" class="h-6 w-6"></i></div>
+          <span class="text-xs font-mono tracking-[.3em] text-teal/60 mt-2">02</span>
+        </div>
+        <h3 class="text-xl font-display font-bold text-ink group-hover:text-primary-deep transition">الحجامة الرطبة</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">علاج تكاملي مثبت لتصفية الدم وطرد السموم.</p>
+        <div class="mt-6 pt-5 border-t border-dashed border-teal/20 flex items-center justify-between">
+          <span class="text-sm font-bold text-teal">احجز جلستك</span>
+          <span class="h-9 w-9 rounded-full bg-primary-soft group-hover:bg-teal grid place-items-center transition-all duration-300"><i data-lucide="arrow-left" class="h-4 w-4 text-teal group-hover:text-white transition"></i></span>
+        </div>
+      </a>
+      
+      <a href="booking.html" class="reveal group relative flex flex-col rounded-[1.75rem] bg-white border border-teal/12 p-7 overflow-hidden hover:shadow-[0_25px_60px_-25px_rgba(45,138,158,0.45)] hover:-translate-y-1.5 transition-all duration-500">
+        <div class="flex items-start justify-between mb-8">
+          <div class="relative h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500"><i data-lucide="activity" class="h-6 w-6"></i></div>
+          <span class="text-xs font-mono tracking-[.3em] text-teal/60 mt-2">03</span>
+        </div>
+        <h3 class="text-xl font-display font-bold text-ink group-hover:text-primary-deep transition">الحجامة المتحركة</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">تدليك عميق بالكاسات لإرخاء العضلات.</p>
+        <div class="mt-6 pt-5 border-t border-dashed border-teal/20 flex items-center justify-between">
+          <span class="text-sm font-bold text-teal">احجز جلستك</span>
+          <span class="h-9 w-9 rounded-full bg-primary-soft group-hover:bg-teal grid place-items-center transition-all duration-300"><i data-lucide="arrow-left" class="h-4 w-4 text-teal group-hover:text-white transition"></i></span>
+        </div>
+      </a>
+      <a href="booking.html" class="reveal group relative flex flex-col rounded-[1.75rem] bg-white border border-teal/12 p-7 overflow-hidden hover:shadow-[0_25px_60px_-25px_rgba(45,138,158,0.45)] hover:-translate-y-1.5 transition-all duration-500">
+        <div class="flex items-start justify-between mb-8">
+          <div class="relative h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500"><i data-lucide="flower-2" class="h-6 w-6"></i></div>
+          <span class="text-xs font-mono tracking-[.3em] text-teal/60 mt-2">04</span>
+        </div>
+        <h3 class="text-xl font-display font-bold text-ink group-hover:text-primary-deep transition">التدليك الطبي</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">جلسات مساج علاجية للاسترخاء وتخفيف التوتر.</p>
+        <div class="mt-6 pt-5 border-t border-dashed border-teal/20 flex items-center justify-between">
+          <span class="text-sm font-bold text-teal">احجز جلستك</span>
+          <span class="h-9 w-9 rounded-full bg-primary-soft group-hover:bg-teal grid place-items-center transition-all duration-300"><i data-lucide="arrow-left" class="h-4 w-4 text-teal group-hover:text-white transition"></i></span>
+        </div>
+      </a>
+      <a href="booking.html" class="reveal group relative flex flex-col rounded-[1.75rem] bg-white border border-teal/12 p-7 overflow-hidden hover:shadow-[0_25px_60px_-25px_rgba(45,138,158,0.45)] hover:-translate-y-1.5 transition-all duration-500">
+        <div class="flex items-start justify-between mb-8">
+          <div class="relative h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500"><i data-lucide="leaf" class="h-6 w-6"></i></div>
+          <span class="text-xs font-mono tracking-[.3em] text-teal/60 mt-2">05</span>
+        </div>
+        <h3 class="text-xl font-display font-bold text-ink group-hover:text-primary-deep transition">الطب النبوي</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">علاجات من السنة النبوية بأعشاب وزيوت طبيعية.</p>
+        <div class="mt-6 pt-5 border-t border-dashed border-teal/20 flex items-center justify-between">
+          <span class="text-sm font-bold text-teal">احجز جلستك</span>
+          <span class="h-9 w-9 rounded-full bg-primary-soft group-hover:bg-teal grid place-items-center transition-all duration-300"><i data-lucide="arrow-left" class="h-4 w-4 text-teal group-hover:text-white transition"></i></span>
+        </div>
+      </a>
+      <a href="booking.html" class="reveal group relative flex flex-col rounded-[1.75rem] bg-white border border-teal/12 p-7 overflow-hidden hover:shadow-[0_25px_60px_-25px_rgba(45,138,158,0.45)] hover:-translate-y-1.5 transition-all duration-500">
+        <div class="flex items-start justify-between mb-8">
+          <div class="relative h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-lg shadow-teal/30 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500"><i data-lucide="sparkles" class="h-6 w-6"></i></div>
+          <span class="text-xs font-mono tracking-[.3em] text-teal/60 mt-2">06</span>
+        </div>
+        <h3 class="text-xl font-display font-bold text-ink group-hover:text-primary-deep transition">التغذية العلاجية</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">برامج تكاملية مخصّصة تجمع التغذية والعلاج.</p>
+        <div class="mt-6 pt-5 border-t border-dashed border-teal/20 flex items-center justify-between">
+          <span class="text-sm font-bold text-teal">احجز جلستك</span>
+          <span class="h-9 w-9 rounded-full bg-primary-soft group-hover:bg-teal grid place-items-center transition-all duration-300"><i data-lucide="arrow-left" class="h-4 w-4 text-teal group-hover:text-white transition"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="py-20 relative overflow-hidden bg-primary-soft/25">
+  <div class="absolute inset-0 opacity-[0.09] pointer-events-none pattern-layer invert"></div>
+  <div class="absolute -top-24 right-1/4 h-[380px] w-[380px] rounded-full bg-seafoam/25 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-24 left-1/4 h-[380px] w-[380px] rounded-full bg-teal/20 blur-3xl pointer-events-none"></div>
+
+  <div class="container-x relative">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">خطوات بسيطة</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">رحلتك العلاجية <span class="text-gradient-primary">في 4 خطوات</span></h2>
+    </div>
+
+    <div class="relative mt-20 grid md:grid-cols-4 gap-10">
+      <div class="hidden md:block absolute top-11 right-[12%] left-[12%] h-px bg-gradient-to-r from-transparent via-teal/60 to-transparent"></div>
+
+      <div class="reveal relative text-center">
+        <div class="relative mx-auto h-22 w-22">
+          <div class="h-20 w-20 mx-auto rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-[0_20px_50px_-10px_rgba(45,138,158,0.55)] rotate-45"><i data-lucide="calendar-check" class="h-8 w-8 -rotate-45"></i></div>
+          <span class="absolute top-0 right-20 h-9 w-9 rounded-full bg-white text-teal text-sm font-black grid place-items-center shadow-lg ring-1 ring-teal/20">1</span>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-ink">احجز موعدك</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed">تواصل معنا واختر الوقت المناسب لك.</p>
+      </div>
+      <div class="reveal relative text-center">
+        <div class="relative mx-auto h-22 w-22">
+          <div class="h-20 w-20 mx-auto rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-[0_20px_50px_-10px_rgba(45,138,158,0.55)] rotate-45"><i data-lucide="clipboard-list" class="h-8 w-8 -rotate-45"></i></div>
+          <span class="absolute -top-1 right-20 h-9 w-9 rounded-full bg-white text-teal text-sm font-black grid place-items-center shadow-lg ring-1 ring-teal/20">2</span>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-ink">تقييم مبدئي</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed">نستمع لحالتك ونضع خطة علاجية شخصية.</p>
+      </div>
+      <div class="reveal relative text-center">
+        <div class="relative mx-auto h-22 w-22">
+          <div class="h-20 w-20 mx-auto rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-[0_20px_50px_-10px_rgba(45,138,158,0.55)] rotate-45"><i data-lucide="stethoscope" class="h-8 w-8 -rotate-45"></i></div>
+          <span class="absolute -top-1 right-20 h-9 w-9 rounded-full bg-white text-teal text-sm font-black grid place-items-center shadow-lg ring-1 ring-teal/20">3</span>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-ink">الجلسة العلاجية</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed">تنفيذ الخطة بأدوات معقّمة وأيدٍ خبيرة.</p>
+      </div>
+      <div class="reveal relative text-center">
+        <div class="relative mx-auto h-22 w-22">
+          <div class="h-20 w-20 mx-auto rounded-2xl bg-gradient-to-br from-teal to-primary-deep text-white grid place-items-center shadow-[0_20px_50px_-10px_rgba(45,138,158,0.55)] rotate-45"><i data-lucide="smile" class="h-8 w-8 -rotate-45"></i></div>
+          <span class="absolute -top-1 right-20 h-9 w-9 rounded-full bg-white text-teal text-sm font-black grid place-items-center shadow-lg ring-1 ring-teal/20">4</span>
+        </div>
+        <h3 class="mt-6 font-display font-bold text-xl text-ink">متابعة النتائج</h3>
+        <p class="mt-3 text-sm text-muted-foreground leading-relaxed">متابعة مستمرة لضمان أفضل النتائج.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFERS ============ -->
+<section id="offers" class="py-20 relative overflow-hidden bg-primary-soft/30">
+  <div class="container-x relative">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">باقات مميّزة</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">عروضنا <span class="text-gradient-primary">الحصرية</span></h2>
+      <p class="mt-6 text-center text-muted-foreground max-w-2xl mx-auto leading-loose">باقات علاجية بأسعار خاصة، مصمّمة لتمنحك أفضل رعاية بأعلى قيمة.</p>
+    </div>
+
+    <div class="mt-14">
+      <div class="swiper offers-swiper !pb-16">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="group relative rounded-[2rem] bg-white border border-teal/15 overflow-hidden shadow-[0_20px_60px_-30px_rgba(12,35,64,0.25)] hover:shadow-[0_30px_80px_-30px_rgba(45,138,158,0.4)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col h-full">
+              <div class="relative h-56 overflow-hidden">
+                <img src="images/location/loc-1.png" alt="باقة الحجامة النبوية" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <span class="absolute top-4 right-4 inline-flex items-center gap-1.5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg"><i data-lucide="tag" class="h-3 w-3"></i> الأكثر طلباً</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-xl font-display font-bold text-ink">باقة الحجامة النبوية</h3>
+                <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">جلسة حجامة نبوية شاملة مع استشارة طبية وتقييم مبدئي مجاني.</p>
+                <div class="mt-6 flex items-end justify-between border-t border-dashed border-teal/20 pt-5">
+                  <div>
+                    <div class="text-xs text-muted-foreground line-through">350 ر.س</div>
+                    <div class="text-3xl font-display font-black text-gradient-primary leading-none mt-1">250 <span class="text-sm font-bold">ر.س</span></div>
+                  </div>
+                  <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-5 py-2.5 text-sm font-bold shadow-md hover:brightness-110 transition">احجز العرض <i data-lucide="arrow-left" class="h-4 w-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="group relative rounded-[2rem] bg-white border border-teal/15 overflow-hidden shadow-[0_20px_60px_-30px_rgba(12,35,64,0.25)] hover:shadow-[0_30px_80px_-30px_rgba(45,138,158,0.4)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col h-full">
+              <div class="relative h-56 overflow-hidden">
+                <img src="images/location/loc-3.png" alt="باقة العناية المتكاملة" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <span class="absolute top-4 right-4 inline-flex items-center gap-1.5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg"><i data-lucide="tag" class="h-3 w-3"></i> وفّر ٢٣٪</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-xl font-display font-bold text-ink">باقة العناية المتكاملة</h3>
+                <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">٣ جلسات علاجية متنوعة (حجامة + تدليك + استشارة تغذية).</p>
+                <div class="mt-6 flex items-end justify-between border-t border-dashed border-teal/20 pt-5">
+                  <div>
+                    <div class="text-xs text-muted-foreground line-through">900 ر.س</div>
+                    <div class="text-3xl font-display font-black text-gradient-primary leading-none mt-1">690 <span class="text-sm font-bold">ر.س</span></div>
+                  </div>
+                  <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-5 py-2.5 text-sm font-bold shadow-md hover:brightness-110 transition">احجز العرض <i data-lucide="arrow-left" class="h-4 w-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="group relative rounded-[2rem] bg-white border border-teal/15 overflow-hidden shadow-[0_20px_60px_-30px_rgba(12,35,64,0.25)] hover:shadow-[0_30px_80px_-30px_rgba(45,138,158,0.4)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col h-full">
+              <div class="relative h-56 overflow-hidden">
+                <img src="images/location/loc-5.png" alt="باقة السيدات الذهبية" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <span class="absolute top-4 right-4 inline-flex items-center gap-1.5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg"><i data-lucide="tag" class="h-3 w-3"></i> قسم السيدات</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-xl font-display font-bold text-ink">باقة السيدات الذهبية</h3>
+                <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">برنامج علاجي مخصّص للسيدات بأيدٍ نسائية في جناح مستقل.</p>
+                <div class="mt-6 flex items-end justify-between border-t border-dashed border-teal/20 pt-5">
+                  <div>
+                    <div class="text-xs text-muted-foreground line-through">550 ر.س</div>
+                    <div class="text-3xl font-display font-black text-gradient-primary leading-none mt-1">420 <span class="text-sm font-bold">ر.س</span></div>
+                  </div>
+                  <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-5 py-2.5 text-sm font-bold shadow-md hover:brightness-110 transition">احجز العرض <i data-lucide="arrow-left" class="h-4 w-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="group relative rounded-[2rem] bg-white border border-teal/15 overflow-hidden shadow-[0_20px_60px_-30px_rgba(12,35,64,0.25)] hover:shadow-[0_30px_80px_-30px_rgba(45,138,158,0.4)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col h-full">
+              <div class="relative h-56 overflow-hidden">
+                <img src="images/location/loc-6.png" alt="باقة العلاج الطبيعي" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <span class="absolute top-4 right-4 inline-flex items-center gap-1.5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg"><i data-lucide="tag" class="h-3 w-3"></i> توفير كبير</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-xl font-display font-bold text-ink">باقة العلاج الطبيعي</h3>
+                <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">٥ جلسات علاج طبيعي مع خطة تأهيلية شخصية ومتابعة.</p>
+                <div class="mt-6 flex items-end justify-between border-t border-dashed border-teal/20 pt-5">
+                  <div>
+                    <div class="text-xs text-muted-foreground line-through">1200 ر.س</div>
+                    <div class="text-3xl font-display font-black text-gradient-primary leading-none mt-1">890 <span class="text-sm font-bold">ر.س</span></div>
+                  </div>
+                  <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-5 py-2.5 text-sm font-bold shadow-md hover:brightness-110 transition">احجز العرض <i data-lucide="arrow-left" class="h-4 w-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="group relative rounded-[2rem] bg-white border border-teal/15 overflow-hidden shadow-[0_20px_60px_-30px_rgba(12,35,64,0.25)] hover:shadow-[0_30px_80px_-30px_rgba(45,138,158,0.4)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col h-full">
+              <div class="relative h-56 overflow-hidden">
+                <img src="images/location/loc-7.png" alt="باقة التغذية العلاجية" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <span class="absolute top-4 right-4 inline-flex items-center gap-1.5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg"><i data-lucide="tag" class="h-3 w-3"></i> جديد</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-xl font-display font-bold text-ink">باقة التغذية العلاجية</h3>
+                <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">استشارة تغذية علاجية + برنامج غذائي مخصّص لمدة شهر.</p>
+                <div class="mt-6 flex items-end justify-between border-t border-dashed border-teal/20 pt-5">
+                  <div>
+                    <div class="text-xs text-muted-foreground line-through">450 ر.س</div>
+                    <div class="text-3xl font-display font-black text-gradient-primary leading-none mt-1">320 <span class="text-sm font-bold">ر.س</span></div>
+                  </div>
+                  <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-5 py-2.5 text-sm font-bold shadow-md hover:brightness-110 transition">احجز العرض <i data-lucide="arrow-left" class="h-4 w-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOUR ============ -->
+<section id="tour" class="py-20 relative overflow-hidden bg-white">
+  <div class="container-x relative">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">من داخل المركز</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">جولة داخل <span class="text-gradient-primary">المركز</span></h2>
+      <p class="mt-6 text-center text-muted-foreground max-w-2xl mx-auto leading-loose">تجوّل بين أرجاء منزل الحكمة — بيئة راقية، مصمّمة لتمنحك تجربة علاجية استثنائية.</p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-[1.6fr_1fr] gap-5">
+      <button type="button" class="group relative rounded-[2rem] overflow-hidden shadow-[0_30px_80px_-30px_rgba(12,35,64,0.4)] aspect-[4/3] lg:aspect-auto lg:min-h-[520px]">
+        <img id="tour-main-img" src="images/location/loc-1.png"
+          data-images='["images/location/loc-1.png","images/location/loc-3.png","images/location/loc-5.png","images/location/loc-6.png","images/location/loc-7.png","images/location/loc-8.png","images/location/loc-9.png","images/location/loc-2.png"]'
+          alt="جولة داخل المركز" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 right-6 left-6 flex items-center justify-between text-white">
+          <div>
+            <div class="text-[11px] tracking-[.3em] uppercase text-white/80">اضغط للاستعراض</div>
+            <div id="tour-counter" class="mt-1 font-display font-bold text-2xl">صورة 1 من 8</div>
+          </div>
+          <span class="h-12 w-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 grid place-items-center group-hover:bg-white group-hover:text-teal transition"><i data-lucide="play-circle" class="h-6 w-6"></i></span>
+        </div>
+      </button>
+
+      <div class="grid grid-rows-2 gap-5">
+        <button type="button" data-tour-side class="group relative rounded-[1.75rem] overflow-hidden shadow-[0_20px_50px_-25px_rgba(12,35,64,0.35)] min-h-[240px]">
+          <img src="images/location/loc-3.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+        </button>
+        <button type="button" data-tour-side class="group relative rounded-[1.75rem] overflow-hidden shadow-[0_20px_50px_-25px_rgba(12,35,64,0.35)] min-h-[240px]">
+          <img src="images/location/loc-5.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+      <button type="button" data-tour-thumb="1" class="group relative rounded-2xl overflow-hidden aspect-square shadow-md transition ring-2 ring-teal">
+        <img src="images/location/loc-3.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+      </button>
+      <button type="button" data-tour-thumb="2" class="group relative rounded-2xl overflow-hidden aspect-square shadow-md transition ring-2 ring-transparent hover:ring-teal/40">
+        <img src="images/location/loc-5.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+      </button>
+      <button type="button" data-tour-thumb="3" class="group relative rounded-2xl overflow-hidden aspect-square shadow-md transition ring-2 ring-transparent hover:ring-teal/40">
+        <img src="images/location/loc-6.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+      </button>
+      <button type="button" data-tour-thumb="4" class="group relative rounded-2xl overflow-hidden aspect-square shadow-md transition ring-2 ring-transparent hover:ring-teal/40">
+        <img src="images/location/loc-7.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+      </button>
+      <button type="button" data-tour-thumb="5" class="group relative rounded-2xl overflow-hidden aspect-square shadow-md transition ring-2 ring-transparent hover:ring-teal/40">
+        <img src="images/location/loc-8.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+      </button>
+    </div>
+
+    <div class="mt-6 flex justify-center">
+      <button type="button" id="tour-show-all" class="inline-flex items-center gap-3 rounded-full bg-white border border-teal/25 text-teal px-6 py-3 text-sm font-bold hover:bg-teal hover:text-white transition shadow-sm">
+        عرض جميع الصور (8)
+        <i data-lucide="arrow-left" class="h-4 w-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="tour-lightbox" class="hidden fixed inset-0 z-[100] bg-ink/85 backdrop-blur-md p-4 sm:p-10 overflow-y-auto">
+    <button type="button" id="tour-lightbox-close" aria-label="إغلاق" class="fixed top-6 left-6 h-12 w-12 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white grid place-items-center backdrop-blur-md z-[101] transition"><i data-lucide="x" class="h-5 w-5"></i></button>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+      <button type="button" data-tour-lightbox-item="0" class="group relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img src="images/location/loc-1.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" /></button>
+      <button type="button" data-tour-lightbox-item="1" class="group relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img src="images/location/loc-3.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" /></button>
+      <button type="button" data-tour-lightbox-item="2" class="group relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img src="images/location/loc-5.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" /></button>
+      <button type="button" data-tour-lightbox-item="3" class="group relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img src="images/location/loc-6.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" /></button>
+      <button type="button" data-tour-lightbox-item="4" class="group relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img src="images/location/loc-7.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" /></button>
+      <button type="button" data-tour-lightbox-item="5" class="group relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img src="images/location/loc-8.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" /></button>
+      <button type="button" data-tour-lightbox-item="6" class="group relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img src="images/location/loc-9.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" /></button>
+      <button type="button" data-tour-lightbox-item="7" class="group relative rounded-2xl overflow-hidden aspect-square shadow-2xl"><img src="images/location/loc-2.png" alt="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500" /></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team" class="py-20 bg-primary-soft/30">
+  <div class="container-x">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">نخبة من الخبرات</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">الفريق <span class="text-gradient-primary">الطبي</span></h2>
+    </div>
+
+    <div class="mt-16">
+      <div class="swiper team-swiper !pb-14">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="group relative rounded-[2rem] overflow-hidden bg-gradient-to-b from-primary-soft to-white border border-border">
+              <div class="relative h-96 overflow-hidden">
+                <img src="images/team/usama.png" alt="د. أسامة" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+                <span class="absolute top-5 right-5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">مؤسس المجمع</span>
+              </div>
+              <div class="relative p-7 text-center">
+                <div class="mx-auto h-px w-16 bg-gold mb-4"></div>
+                <h3 class="text-2xl font-display font-bold">د. أسامة</h3>
+                <p class="text-sm text-muted-foreground mt-2">أخصائي الطب البديل والحجامة</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group relative rounded-[2rem] overflow-hidden bg-gradient-to-b from-primary-soft to-white border border-border">
+              <div class="relative h-96 overflow-hidden">
+                <img src="images/team/hasan.png" alt="د. حسن" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+                <span class="absolute top-5 right-5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">خبرة 12 سنة</span>
+              </div>
+              <div class="relative p-7 text-center">
+                <div class="mx-auto h-px w-16 bg-gold mb-4"></div>
+                <h3 class="text-2xl font-display font-bold">د. حسن</h3>
+                <p class="text-sm text-muted-foreground mt-2">أخصائي العلاج الطبيعي</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group relative rounded-[2rem] overflow-hidden bg-gradient-to-b from-primary-soft to-white border border-border">
+              <div class="relative h-96 overflow-hidden">
+                <img src="images/team/safa.png" alt="د. صفاء" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+                <span class="absolute top-5 right-5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">قسم السيدات</span>
+              </div>
+              <div class="relative p-7 text-center">
+                <div class="mx-auto h-px w-16 bg-gold mb-4"></div>
+                <h3 class="text-2xl font-display font-bold">د. صفاء</h3>
+                <p class="text-sm text-muted-foreground mt-2">أخصائية التغذية العلاجية</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-20 relative overflow-hidden bg-white">
+  <div class="container-x relative grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
+    <div class="lg:sticky lg:top-24 reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">الأسئلة الشائعة</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">كل ما تودّ معرفته<br /><span class="text-gradient-primary">قبل زيارتنا</span></h2>
+      <p class="mt-6 text-muted-foreground leading-loose text-lg">جمعنا لك أكثر الأسئلة تكراراً. إن لم تجد إجابتك، تواصل معنا مباشرة وسنسعد بخدمتك في أي وقت.</p>
+      <a href="contact.html" class="group inline-flex mt-8 items-center gap-3 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-7 py-3.5 font-bold shadow-lg shadow-teal/25 hover:shadow-teal/40 hover:-translate-y-0.5 transition">
+        تواصل معنا <i data-lucide="arrow-left" class="h-4 w-4 group-hover:-translate-x-1 transition"></i>
+      </a>
+    </div>
+
+    <div class="space-y-4">
+      <div data-faq-item class="relative rounded-2xl border transition-all overflow-hidden backdrop-blur-sm bg-white/70 border-teal/15 hover:border-teal/35 hover:bg-white">
+        <button data-faq-trigger class="w-full flex items-center justify-between text-right gap-4 p-6 font-bold text-lg">
+          <span class="flex items-start gap-4 min-w-0">
+            <span class="shrink-0 mt-1 h-7 w-7 rounded-lg grid place-items-center text-xs font-mono transition bg-primary-soft text-teal">01</span>
+            <span class="text-ink leading-snug">هل الحجامة آمنة تماماً؟</span>
+          </span>
+          <span data-faq-icon class="shrink-0 h-9 w-9 rounded-full grid place-items-center transition bg-primary-soft text-teal"><i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></span>
+        </button>
+        <div data-faq-panel class="grid transition-all duration-500" style="grid-template-rows:0fr; opacity:0;">
+          <div class="overflow-hidden">
+            <div class="mx-6 mb-6 mt-1 pr-11 border-r-2 border-dashed border-teal/30">
+              <p class="pr-4 leading-loose text-muted-foreground">نعم، تُجرى بأدوات معقّمة ذات استخدام واحد على يد أخصائيين معتمدين ووفق بروتوكولات صارمة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-faq-item class="relative rounded-2xl border transition-all overflow-hidden backdrop-blur-sm bg-white/70 border-teal/15 hover:border-teal/35 hover:bg-white">
+        <button data-faq-trigger class="w-full flex items-center justify-between text-right gap-4 p-6 font-bold text-lg">
+          <span class="flex items-start gap-4 min-w-0">
+            <span class="shrink-0 mt-1 h-7 w-7 rounded-lg grid place-items-center text-xs font-mono transition bg-primary-soft text-teal">02</span>
+            <span class="text-ink leading-snug">كم تستغرق الجلسة العلاجية؟</span>
+          </span>
+          <span data-faq-icon class="shrink-0 h-9 w-9 rounded-full grid place-items-center transition bg-primary-soft text-teal"><i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></span>
+        </button>
+        <div data-faq-panel class="grid transition-all duration-500" style="grid-template-rows:0fr; opacity:0;">
+          <div class="overflow-hidden">
+            <div class="mx-6 mb-6 mt-1 pr-11 border-r-2 border-dashed border-teal/30">
+              <p class="pr-4 leading-loose text-muted-foreground">تتراوح مدة الجلسة عادة بين 30 و 60 دقيقة حسب نوع العلاج وحالة المريض.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-faq-item class="relative rounded-2xl border transition-all overflow-hidden backdrop-blur-sm bg-white/70 border-teal/15 hover:border-teal/35 hover:bg-white">
+        <button data-faq-trigger class="w-full flex items-center justify-between text-right gap-4 p-6 font-bold text-lg">
+          <span class="flex items-start gap-4 min-w-0">
+            <span class="shrink-0 mt-1 h-7 w-7 rounded-lg grid place-items-center text-xs font-mono transition bg-primary-soft text-teal">03</span>
+            <span class="text-ink leading-snug">هل يوجد قسم مخصص للسيدات؟</span>
+          </span>
+          <span data-faq-icon class="shrink-0 h-9 w-9 rounded-full grid place-items-center transition bg-primary-soft text-teal"><i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></span>
+        </button>
+        <div data-faq-panel class="grid transition-all duration-500" style="grid-template-rows:0fr; opacity:0;">
+          <div class="overflow-hidden">
+            <div class="mx-6 mb-6 mt-1 pr-11 border-r-2 border-dashed border-teal/30">
+              <p class="pr-4 leading-loose text-muted-foreground">نعم، لدينا قسم كامل مخصص للسيدات بكادر طبي نسائي لضمان الخصوصية والراحة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-faq-item class="relative rounded-2xl border transition-all overflow-hidden backdrop-blur-sm bg-white/70 border-teal/15 hover:border-teal/35 hover:bg-white">
+        <button data-faq-trigger class="w-full flex items-center justify-between text-right gap-4 p-6 font-bold text-lg">
+          <span class="flex items-start gap-4 min-w-0">
+            <span class="shrink-0 mt-1 h-7 w-7 rounded-lg grid place-items-center text-xs font-mono transition bg-primary-soft text-teal">04</span>
+            <span class="text-ink leading-snug">كم مرة يُنصح بإجراء الحجامة؟</span>
+          </span>
+          <span data-faq-icon class="shrink-0 h-9 w-9 rounded-full grid place-items-center transition bg-primary-soft text-teal"><i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></span>
+        </button>
+        <div data-faq-panel class="grid transition-all duration-500" style="grid-template-rows:0fr; opacity:0;">
+          <div class="overflow-hidden">
+            <div class="mx-6 mb-6 mt-1 pr-11 border-r-2 border-dashed border-teal/30">
+              <p class="pr-4 leading-loose text-muted-foreground">يُنصح عادة بجلسة كل 3 إلى 6 أشهر للأشخاص الأصحاء، ويُحدد ذلك بعد التقييم.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="py-16 relative overflow-hidden bg-primary-soft/25">
+  <div class="container-x relative">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">آراء زوارنا</span>
+      <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1]">قصص <span class="text-gradient-primary">نفخر بها</span></h2>
+
+      <div class="relative mt-16 max-w-4xl mx-auto">
+        <div class="swiper testimonials-swiper !pb-16">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="relative rounded-[2.5rem] bg-white border border-teal/10 px-8 md:px-16 pt-11 pb-8 text-center overflow-hidden">
+                <i data-lucide="quote" class="absolute -top-4 right-8 h-24 w-24 text-teal/[0.07] rotate-180 pointer-events-none"></i>
+                <i data-lucide="quote" class="absolute -bottom-4 left-8 h-24 w-24 text-teal/[0.07] rotate-180 pointer-events-none"></i>
+                <p class="relative text-xl md:text-2xl font-display leading-loose text-ink/85 mb-7 max-w-2xl mx-auto">"تجربة مختلفة تماماً. الاستقبال راقٍ، والفريق محترف بمعنى الكلمة. شعرت بتحسّن ملحوظ من الجلسة الأولى."</p>
+                <div class="relative flex flex-col items-center gap-3">
+                  <div class="h-16 w-16 rounded-full bg-gradient-to-br from-teal to-primary-deep grid place-items-center text-white font-display font-black text-2xl shadow-lg shadow-teal/30 ring-4 ring-white">م</div>
+                  <div class="mx-auto h-px w-10 bg-gold"></div>
+                  <div class="text-center">
+                    <div class="font-bold text-lg text-ink">أ. محمد الشمري</div>
+                    <div class="inline-flex items-center gap-1.5 text-xs text-teal mt-2 tracking-[.2em]"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i><span>الرياض</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relative rounded-[2.5rem] bg-white border border-teal/10 px-8 md:px-16 pt-11 pb-8 text-center overflow-hidden">
+                <i data-lucide="quote" class="absolute -top-4 right-8 h-24 w-24 text-teal/[0.07] rotate-180 pointer-events-none"></i>
+                <i data-lucide="quote" class="absolute -bottom-4 left-8 h-24 w-24 text-teal/[0.07] rotate-180 pointer-events-none"></i>
+                <p class="relative text-xl md:text-2xl font-display leading-loose text-ink/85 mb-7 max-w-2xl mx-auto">"بيئة نظيفة، أدوات معقّمة، ودقة في المتابعة. أنصح كل من يبحث عن جودة حقيقية بمنزل الحكمة."</p>
+                <div class="relative flex flex-col items-center gap-3">
+                  <div class="h-16 w-16 rounded-full bg-gradient-to-br from-teal to-primary-deep grid place-items-center text-white font-display font-black text-2xl shadow-lg shadow-teal/30 ring-4 ring-white">س</div>
+                  <div class="mx-auto h-px w-10 bg-gold"></div>
+                  <div class="text-center">
+                    <div class="font-bold text-lg text-ink">أ. سارة القحطاني</div>
+                    <div class="inline-flex items-center gap-1.5 text-xs text-teal mt-2 tracking-[.2em]"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i><span>جدة</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relative rounded-[2.5rem] bg-white border border-teal/10 px-8 md:px-16 pt-11 pb-8 text-center overflow-hidden">
+                <i data-lucide="quote" class="absolute -top-4 right-8 h-24 w-24 text-teal/[0.07] rotate-180 pointer-events-none"></i>
+                <i data-lucide="quote" class="absolute -bottom-4 left-8 h-24 w-24 text-teal/[0.07] rotate-180 pointer-events-none"></i>
+                <p class="relative text-xl md:text-2xl font-display leading-loose text-ink/85 mb-7 max-w-2xl mx-auto">"قسم السيدات ممتاز وخصوصية عالية. الدكتورة صفاء صبورة ومتفانية. شكراً لكم على الاهتمام."</p>
+                <div class="relative flex flex-col items-center gap-3">
+                  <div class="h-16 w-16 rounded-full bg-gradient-to-br from-teal to-primary-deep grid place-items-center text-white font-display font-black text-2xl shadow-lg shadow-teal/30 ring-4 ring-white">ن</div>
+                  <div class="mx-auto h-px w-10 bg-gold"></div>
+                  <div class="text-center">
+                    <div class="font-bold text-lg text-ink">أ. نورة العتيبي</div>
+                    <div class="inline-flex items-center gap-1.5 text-xs text-teal mt-2 tracking-[.2em]"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i><span>الدمام</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="relative overflow-hidden text-white/75 bg-gradient-to-b from-[#0c2340] via-[#0a1b30] to-[#061423]">
+  <div class="absolute inset-0 opacity-[0.08] pointer-events-none pattern-layer"></div>
+  <div class="absolute -top-24 right-1/4 h-[320px] w-[320px] rounded-full bg-seafoam/15 blur-3xl"></div>
+  <div class="absolute -bottom-24 left-1/4 h-[320px] w-[320px] rounded-full bg-teal/15 blur-3xl"></div>
+
+  <div class="container-x py-16 grid md:grid-cols-4 gap-12 relative">
+    <div class="md:col-span-2">
+      <img src="images/logo/logo-blue.png" alt="منزل الحكمة" class="h-16 rounded-xl" />
+      <p class="mt-6 text-sm leading-loose max-w-md text-white/70">مجمع منزل الحكمة للطب البديل — رعاية تكاملية حديثة تجمع بين الطب النبوي وأحدث تقنيات العلاج الطبيعي بأيدي نخبة من الأطباء المتخصصين.</p>
+      <div class="flex gap-3 mt-8">
+        <a href="#" class="h-11 w-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-teal hover:border-teal grid place-items-center transition shadow-sm"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+        <a href="#" class="h-11 w-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-teal hover:border-teal grid place-items-center transition shadow-sm"><i data-lucide="message-circle" class="h-4 w-4"></i></a>
+        <a href="#" class="h-11 w-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-teal hover:border-teal grid place-items-center transition shadow-sm"><i data-lucide="phone" class="h-4 w-4"></i></a>
+        <a href="#" class="h-11 w-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-teal hover:border-teal grid place-items-center transition shadow-sm"><i data-lucide="mail" class="h-4 w-4"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold mb-5 tracking-wide text-white">روابط سريعة</h4>
+      <ul class="space-y-3 text-sm">
+        <li><a href="index.html" class="hover:text-teal transition">الرئيسية</a></li>
+        <li><a href="doctors.html" class="hover:text-teal transition">الفريق الطبي</a></li>
+        <li><a href="booking.html" class="hover:text-teal transition">حجز موعد</a></li>
+        <li><a href="contact.html" class="hover:text-teal transition">اتصل بنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-5 tracking-wide text-white">تواصل معنا</h4>
+      <ul class="space-y-3 text-sm">
+        <li>+966 5X XXX XXXX</li>
+        <li>info@manzil-alhekmah.com</li>
+        <li>المملكة العربية السعودية</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 relative">
+    <div class="container-x py-6 text-xs text-white/55 flex flex-wrap gap-2 justify-between">
+      <span>© 2026 مجمع منزل الحكمة للطب البديل. جميع الحقوق محفوظة.</span>
+      <span>صُنع بعناية ❤</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ زر الصعود لأعلى ============ -->
+<button id="back-to-top" aria-label="الصعود لأعلى" class="fixed bottom-6 left-6 z-40 h-12 w-12 rounded-full bg-ink text-white shadow-xl grid place-items-center hover:bg-teal transition">
+  <i data-lucide="arrow-up" class="h-5 w-5"></i>
+</button>
+
+<!-- ============ زر واتساب ============ -->
+<a id="whatsapp-btn" href="https://wa.me/9665XXXXXXXX" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب" class="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-xl grid place-items-center hover:brightness-105 transition">
+  <i data-lucide="message-circle" class="h-6 w-6"></i>
+</a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

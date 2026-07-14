@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>الفريق الطبي — منزل الحكمة</title>
+<meta name="description" content="تعرّف على نخبة الأطباء والمعالجين في مجمع منزل الحكمة للطب البديل." />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+
+<!-- Swiper (مكتبة السلايدر) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Lucide (مكتبة الأيقونات) -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-ink font-body">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-4 inset-x-0 z-50 px-4">
+  <div id="site-header-bar" class="mx-auto max-w-6xl grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-full bg-white border border-border shadow-[0_10px_30px_-15px_rgba(12,35,64,0.25)] px-3 sm:px-5 py-2.5 transition-shadow duration-300">
+    <a href="index.html" class="gap-3 min-w-0">
+      <img src="images/logo/logo-blue.png" alt="منزل الحكمة" class="h-11 w-28 rounded-xl" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center justify-center gap-8 text-sm font-medium text-ink/80">
+      <a href="index.html" class="relative hover:text-teal transition group whitespace-nowrap">
+        الرئيسية
+        <span class="absolute -bottom-1.5 right-0 h-px w-0 bg-teal group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="doctors.html" class="relative hover:text-teal transition group whitespace-nowrap">
+        الأطباء
+        <span class="absolute -bottom-1.5 right-0 h-px w-0 bg-teal group-hover:w-full transition-all duration-300"></span>
+      </a>
+
+      <a href="index.html#services" class="relative hover:text-teal transition group whitespace-nowrap">
+        خدماتنا
+        <span class="absolute -bottom-1.5 right-0 h-px w-0 bg-teal group-hover:w-full transition-all duration-300"></span>
+      </a>
+
+      <a href="contact.html" class="relative hover:text-teal transition group whitespace-nowrap">
+        اتصل بنا
+        <span class="absolute -bottom-1.5 right-0 h-px w-0 bg-teal group-hover:w-full transition-all duration-300"></span>
+      </a>
+    </nav>
+
+    <!-- ============ MOBILE MENU ============ -->
+    <div id="mobile-menu" class="lg:hidden fixed top-[85px] inset-x-4 z-40">
+      <nav class="rounded-3xl bg-white border border-border shadow-[0_25px_60px_-20px_rgba(12,35,64,0.3)] p-3 space-y-1 text-ink">
+        <a href="index.html" class="flex items-center gap-3 rounded-xl px-4 py-3.5 font-semibold hover:bg-primary-soft/50 hover:text-teal transition">
+          <i data-lucide="home" class="h-4 w-4"></i> الرئيسية
+        </a>
+        <a href="doctors.html" class="flex items-center gap-3 rounded-xl px-4 py-3.5 font-semibold hover:bg-primary-soft/50 hover:text-teal transition">
+          <i data-lucide="stethoscope" class="h-4 w-4"></i> الأطباء
+        </a>
+        <a href="index.html#services" class="flex items-center gap-3 rounded-xl px-4 py-3.5 font-semibold hover:bg-primary-soft/50 hover:text-teal transition">
+          <i data-lucide="sparkles" class="h-4 w-4"></i> خدماتنا
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 rounded-xl px-4 py-3.5 font-semibold hover:bg-primary-soft/50 hover:text-teal transition">
+          <i data-lucide="phone" class="h-4 w-4"></i> اتصل بنا
+        </a>
+
+        <div class="pt-2 mt-1 border-t border-border">
+          <a href="booking.html" class="flex items-center justify-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-4 py-3.5 text-sm font-bold shadow-md">
+            احجز موعدك
+            <i data-lucide="arrow-left" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="justify-self-end flex items-center gap-2">
+      <a href="booking.html" class="hidden lg:inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-teal to-primary-deep text-white px-4 py-2 text-sm font-bold shadow-md hover:brightness-110 transition whitespace-nowrap">
+        احجز موعدك
+        <i data-lucide="arrow-left" class="h-4 w-4"></i>
+      </a>
+      <!-- Burger Button (Mobile) -->
+      <button id="burger-btn" aria-label="فتح القائمة" class="lg:hidden h-10 w-10 rounded-full bg-primary-soft/60 text-teal grid place-items-center shrink-0">
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="pt-28 pb-14 relative overflow-hidden bg-gradient-to-br from-white via-[#f0f8fb] to-[#e8f2f2]">
+  <div class="absolute inset-0 opacity-[0.06] pointer-events-none pattern-layer invert"></div>
+  <div class="absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full bg-seafoam/25 blur-3xl"></div>
+  <div class="absolute -bottom-32 -left-32 h-[420px] w-[420px] rounded-full bg-teal/20 blur-3xl"></div>
+
+  <div class="container-x relative text-center max-w-2xl mx-auto">
+    <span class="divider-ornate text-[11px] uppercase tracking-[.35em] font-semibold">الفريق الطبي</span>
+    <h1 class="mt-6 text-4xl md:text-6xl font-display font-bold leading-tight">نخبة من <span class="text-gradient-primary">الأطباء المتخصصين</span></h1>
+    <p class="mt-6 text-lg text-muted-foreground leading-loose">فريق طبي معتمد بخبرات طويلة في الطب البديل والعلاج الطبيعي والتغذية العلاجية — في خدمتك لتقديم تجربة علاجية استثنائية.</p>
+  </div>
+</section>
+
+<!-- ============ DOCTORS GRID ============ -->
+<section class="py-16 bg-white">
+  <div class="container-x grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <div class="reveal group relative rounded-[2rem] overflow-hidden bg-white/80 backdrop-blur-md border border-white/70 shadow-[0_25px_70px_-30px_rgba(12,35,64,0.2)] hover:-translate-y-2 transition duration-500">
+      <div class="relative h-80 overflow-hidden bg-gradient-to-b from-primary-soft to-white">
+        <img src="images/team/usama.png" alt="د. أسامة" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+        <span class="absolute top-5 right-5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">مؤسس المجمع</span>
+        <div class="absolute top-5 left-5 flex items-center gap-1 bg-white/90 backdrop-blur-md rounded-full px-3 py-1.5 shadow-md">
+          <i data-lucide="star" class="h-3.5 w-3.5 fill-gold text-gold"></i>
+          <span class="text-xs font-bold text-ink">5.0</span>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+      <div class="p-7">
+        <div class="mx-auto h-px w-16 bg-gold mb-4"></div>
+        <h3 class="text-2xl font-display font-bold text-center text-ink">د. أسامة</h3>
+        <p class="text-sm text-teal mt-2 text-center font-medium">أخصائي الطب البديل والحجامة</p>
+        <p class="mt-5 text-sm text-muted-foreground leading-relaxed text-center">مؤسس مجمع منزل الحكمة، خبرة تمتد لأكثر من ١٨ عاماً في مجال الحجامة النبوية والطب البديل، حاصل على شهادات معتمدة دولياً.</p>
+        <div class="mt-6 flex items-center justify-between border-t border-dashed border-teal/20 pt-5">
+          <div class="flex items-center gap-2 text-xs text-muted-foreground"><i data-lucide="award" class="h-4 w-4 text-teal"></i><span>خبرة 18 سنة</span></div>
+          <a href="booking.html" class="inline-flex items-center gap-1.5 text-sm font-bold text-teal hover:text-primary-deep transition">احجز موعد <i data-lucide="arrow-left" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal group relative rounded-[2rem] overflow-hidden bg-white/80 backdrop-blur-md border border-white/70 shadow-[0_25px_70px_-30px_rgba(12,35,64,0.2)] hover:-translate-y-2 transition duration-500">
+      <div class="relative h-80 overflow-hidden bg-gradient-to-b from-primary-soft to-white">
+        <img src="images/team/hasan.png" alt="د. حسن" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+        <span class="absolute top-5 right-5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">خبرة 12 سنة</span>
+        <div class="absolute top-5 left-5 flex items-center gap-1 bg-white/90 backdrop-blur-md rounded-full px-3 py-1.5 shadow-md">
+          <i data-lucide="star" class="h-3.5 w-3.5 fill-gold text-gold"></i>
+          <span class="text-xs font-bold text-ink">4.9</span>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+      <div class="p-7">
+        <div class="mx-auto h-px w-16 bg-gold mb-4"></div>
+        <h3 class="text-2xl font-display font-bold text-center text-ink">د. حسن</h3>
+        <p class="text-sm text-teal mt-2 text-center font-medium">أخصائي العلاج الطبيعي</p>
+        <p class="mt-5 text-sm text-muted-foreground leading-relaxed text-center">أخصائي علاج طبيعي معتمد بخبرة ١٢ سنة في تأهيل إصابات العمود الفقري والمفاصل وعلاج الآلام المزمنة.</p>
+        <div class="mt-6 flex items-center justify-between border-t border-dashed border-teal/20 pt-5">
+          <div class="flex items-center gap-2 text-xs text-muted-foreground"><i data-lucide="award" class="h-4 w-4 text-teal"></i><span>خبرة 12 سنة</span></div>
+          <a href="booking.html" class="inline-flex items-center gap-1.5 text-sm font-bold text-teal hover:text-primary-deep transition">احجز موعد <i data-lucide="arrow-left" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal group relative rounded-[2rem] overflow-hidden bg-white/80 backdrop-blur-md border border-white/70 shadow-[0_25px_70px_-30px_rgba(12,35,64,0.2)] hover:-translate-y-2 transition duration-500">
+      <div class="relative h-80 overflow-hidden bg-gradient-to-b from-primary-soft to-white">
+        <img src="images/team/safa.png" alt="د. صفاء" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" />
+        <span class="absolute top-5 right-5 bg-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">قسم السيدات</span>
+        <div class="absolute top-5 left-5 flex items-center gap-1 bg-white/90 backdrop-blur-md rounded-full px-3 py-1.5 shadow-md">
+          <i data-lucide="star" class="h-3.5 w-3.5 fill-gold text-gold"></i>
+          <span class="text-xs font-bold text-ink">5.0</span>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+      <div class="p-7">
+        <div class="mx-auto h-px w-16 bg-gold mb-4"></div>
+        <h3 class="text-2xl font-display font-bold text-center text-ink">د. صفاء</h3>
+        <p class="text-sm text-teal mt-2 text-center font-medium">أخصائية التغذية العلاجية</p>
+        <p class="mt-5 text-sm text-muted-foreground leading-relaxed text-center">أخصائية في قسم السيدات، تقدّم برامج تغذية علاجية مخصّصة وجلسات حجامة بأيدٍ نسائية في جناح مستقل.</p>
+        <div class="mt-6 flex items-center justify-between border-t border-dashed border-teal/20 pt-5">
+          <div class="flex items-center gap-2 text-xs text-muted-foreground"><i data-lucide="award" class="h-4 w-4 text-teal"></i><span>خبرة 10 سنة</span></div>
+          <a href="booking.html" class="inline-flex items-center gap-1.5 text-sm font-bold text-teal hover:text-primary-deep transition">احجز موعد <i data-lucide="arrow-left" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="relative overflow-hidden text-white/75 bg-gradient-to-b from-[#0c2340] via-[#0a1b30] to-[#061423]">
+  <div class="absolute inset-0 opacity-[0.08] pointer-events-none pattern-layer"></div>
+  <div class="absolute -top-24 right-1/4 h-[320px] w-[320px] rounded-full bg-seafoam/15 blur-3xl"></div>
+  <div class="absolute -bottom-24 left-1/4 h-[320px] w-[320px] rounded-full bg-teal/15 blur-3xl"></div>
+
+  <div class="container-x py-16 grid md:grid-cols-4 gap-12 relative">
+    <div class="md:col-span-2">
+      <img src="images/logo/logo-blue.png" alt="منزل الحكمة" class="h-16 rounded-xl" />
+      <p class="mt-6 text-sm leading-loose max-w-md text-white/70">مجمع منزل الحكمة للطب البديل — رعاية تكاملية حديثة تجمع بين الطب النبوي وأحدث تقنيات العلاج الطبيعي بأيدي نخبة من الأطباء المتخصصين.</p>
+      <div class="flex gap-3 mt-8">
+        <a href="#" class="h-11 w-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-teal hover:border-teal grid place-items-center transition shadow-sm"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+        <a href="#" class="h-11 w-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-teal hover:border-teal grid place-items-center transition shadow-sm"><i data-lucide="message-circle" class="h-4 w-4"></i></a>
+        <a href="#" class="h-11 w-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-teal hover:border-teal grid place-items-center transition shadow-sm"><i data-lucide="phone" class="h-4 w-4"></i></a>
+        <a href="#" class="h-11 w-11 rounded-full bg-white/10 border border-white/15 text-white hover:bg-teal hover:border-teal grid place-items-center transition shadow-sm"><i data-lucide="mail" class="h-4 w-4"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold mb-5 tracking-wide text-white">روابط سريعة</h4>
+      <ul class="space-y-3 text-sm">
+        <li><a href="index.html" class="hover:text-teal transition">الرئيسية</a></li>
+        <li><a href="doctors.html" class="hover:text-teal transition">الفريق الطبي</a></li>
+        <li><a href="booking.html" class="hover:text-teal transition">حجز موعد</a></li>
+        <li><a href="contact.html" class="hover:text-teal transition">اتصل بنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-5 tracking-wide text-white">تواصل معنا</h4>
+      <ul class="space-y-3 text-sm">
+        <li>+966 5X XXX XXXX</li>
+        <li>info@manzil-alhekmah.com</li>
+        <li>المملكة العربية السعودية</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 relative">
+    <div class="container-x py-6 text-xs text-white/55 flex flex-wrap gap-2 justify-between">
+      <span>© 2026 مجمع منزل الحكمة للطب البديل. جميع الحقوق محفوظة.</span>
+      <span>صُنع بعناية ❤</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ زر الصعود لأعلى ============ -->
+<button id="back-to-top" aria-label="الصعود لأعلى" class="fixed bottom-6 left-6 z-40 h-12 w-12 rounded-full bg-ink text-white shadow-xl grid place-items-center hover:bg-teal transition">
+  <i data-lucide="arrow-up" class="h-5 w-5"></i>
+</button>
+
+<!-- ============ زر واتساب ============ -->
+<a id="whatsapp-btn" href="https://wa.me/9665XXXXXXXX" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب" class="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-xl grid place-items-center hover:brightness-105 transition">
+  <i data-lucide="message-circle" class="h-6 w-6"></i>
+</a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

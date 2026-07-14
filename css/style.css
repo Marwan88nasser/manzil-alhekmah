@@ -1,0 +1,224 @@
+/* =========================================================
+   منزل الحكمة — Style Sheet عام
+   يحتوي كل الستايلات المخصصة التي لا تغطيها كلاسات Tailwind
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-ink: #0c2340;
+  --color-teal: #2d8a9e;
+  --color-seafoam: #5cbdb9;
+  --color-gold: #b8935a;
+  --color-primary-deep: #1a4a6e;
+  --color-primary-soft: #e8f2f2;
+}
+
+* {
+  border-color: rgba(12, 35, 64, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-ink);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Cairo", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-teal);
+  color: #fff;
+}
+
+/* ---------- Container ---------- */
+.container-x {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ---------- Text / decorative utilities ---------- */
+.divider-ornate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-gold);
+}
+.divider-ornate::before,
+.divider-ornate::after {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(120deg, #b8935a, #e6d3a4, #b8935a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(120deg, #1a4a6e, #2d8a9e, #5cbdb9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, var(--color-seafoam) 0%, #ffffff 50%, var(--color-seafoam) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.glass-dark {
+  background: rgba(12, 35, 64, 0.35);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-mesh {
+  background:
+    radial-gradient(900px 500px at 85% 10%, rgba(92, 189, 185, 0.28), transparent 60%),
+    radial-gradient(700px 500px at 10% 100%, rgba(45, 138, 158, 0.35), transparent 60%),
+    linear-gradient(135deg, #061a30 0%, #0c2340 45%, #1a4a6e 100%);
+}
+
+.ink-mesh {
+  background:
+    radial-gradient(600px 400px at 100% 0%, rgba(184, 147, 90, 0.18), transparent 60%),
+    radial-gradient(600px 400px at 0% 100%, rgba(92, 189, 185, 0.2), transparent 60%),
+    var(--color-ink);
+}
+
+.pattern-layer {
+  background-image: url("../images/pattern-white.png");
+  background-size: 320px;
+}
+
+/* ---------- Marquee ---------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333%); }
+}
+.animate-marquee-x {
+  animation: marquee 28s linear infinite;
+}
+
+/* ---------- Floating ---------- */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.float-y { animation: float-y 5s ease-in-out infinite; }
+.float-y-delay { animation: float-y 5s ease-in-out infinite; animation-delay: 1.5s; }
+
+/* ---------- Ken Burns hero image ---------- */
+@keyframes ken-burns {
+  0% { transform: scale(1.05) translate(0, 0); }
+  100% { transform: scale(1.18) translate(-1%, -1%); }
+}
+.hero-slide-active .hero-slide-img {
+  animation: ken-burns 8s ease-out both;
+}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Swiper overrides ---------- */
+.swiper { --swiper-theme-color: var(--color-teal); }
+.swiper-pagination-bullet {
+  background: var(--color-teal) !important;
+  opacity: 0.35;
+  width: 8px;
+  height: 8px;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  width: 28px !important;
+  border-radius: 6px !important;
+  transition: all 0.35s;
+}
+.hero-swiper .swiper-pagination { bottom: 32px !important; }
+.hero-swiper .swiper-pagination-bullet { background: #fff !important; }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.25s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--color-teal) !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 15px !important;
+  font-weight: 900;
+}
+
+/* ---------- Mobile menu ---------- */
+#mobile-menu {
+  opacity: 0;
+  transform: translateY(-12px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+#mobile-menu.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* ---------- Back to top button ---------- */
+#back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: all 0.3s ease;
+}
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ---------- WhatsApp floating button ---------- */
+#whatsapp-btn {
+  animation: float-y 4s ease-in-out infinite;
+}
