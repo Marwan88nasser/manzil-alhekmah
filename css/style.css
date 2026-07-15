@@ -192,6 +192,11 @@ h1, h2, h3, h4, h5 {
   font-weight: 900;
 }
 
+/* ---------- site header bar ---------- */
+#site-header-bar {
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+}
+
 /* ---------- Mobile menu ---------- */
 #mobile-menu {
   opacity: 0;

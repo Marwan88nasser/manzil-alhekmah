@@ -23,9 +23,9 @@
 
 <!-- ============ HEADER ============ -->
 <header id="site-header" class="fixed top-4 inset-x-0 z-50 px-4">
-  <div id="site-header-bar" class="mx-auto max-w-6xl grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-full bg-white border border-border shadow-[0_10px_30px_-15px_rgba(12,35,64,0.25)] px-3 sm:px-5 py-2.5 transition-shadow duration-300">
+  <div id="site-header-bar" class="mx-auto max-w-6xl grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-full bg-white/70 backdrop-blur-xl backdrop-saturate-150 ring-1 ring-inset ring-white/60 border border-white/40 shadow-[0_10px_30px_-12px_rgba(12,35,64,0.3)] px-3 sm:px-5 py-2.5 transition-shadow duration-300">    
     <a href="index.html" class="gap-3 min-w-0">
-      <img src="images/logo/logo-blue.png" alt="منزل الحكمة" class="h-11 w-28 rounded-xl" />
+      <img src="images/logo/logo-blue.png" alt="منزل الحكمة" class="h-11 w-32 rounded-xl" />
     </a>
 
     <!-- Desktop Nav -->
@@ -218,13 +218,16 @@
 </footer>
 
 <!-- ============ زر الصعود لأعلى ============ -->
-<button id="back-to-top" aria-label="الصعود لأعلى" class="fixed bottom-6 left-6 z-40 h-12 w-12 rounded-full bg-ink text-white shadow-xl grid place-items-center hover:bg-teal transition">
+<button id="back-to-top" aria-label="الصعود لأعلى" class="fixed bottom-6 left-6 z-40 h-12 w-12 rounded-full overflow-hidden bg-gradient-to-b from-[#0f2d50] via-[#0e2440] to-[#0a1f36] text-white shadow-xl ring-1 ring-white/10 grid place-items-center hover:brightness-125 transition">
+  <div class="absolute inset-0 opacity-[0.08] pointer-events-none pattern-layer"></div>
+  <div class="absolute -top-24 right-1/4 h-[320px] w-[320px] rounded-full bg-seafoam/15 blur-3xl"></div>
+  <div class="absolute -bottom-24 left-1/4 h-[320px] w-[320px] rounded-full bg-teal/15 blur-3xl"></div>
   <i data-lucide="arrow-up" class="h-5 w-5"></i>
 </button>
 
 <!-- ============ زر واتساب ============ -->
 <a id="whatsapp-btn" href="https://wa.me/9665XXXXXXXX" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب" class="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-xl grid place-items-center hover:brightness-105 transition">
-  <i data-lucide="message-circle" class="h-6 w-6"></i>
+  <svg viewBox="0 0 24 24" class="h-8 w-8 fill-current"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2Zm0 1.8c2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.52-3.68 8.19-8.2 8.19h-.01a8.2 8.2 0 0 1-4.17-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.15 8.15 0 0 1-1.25-4.34c0-4.52 3.68-8.19 8.2-8.19Zm-4.5 4.53c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.71 2.72 4.24 3.71 2.1.83 2.52.66 2.98.62.46-.04 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.1-.22-.16-.46-.28-.24-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.56.12-.16.25-.64.81-.79.98-.15.16-.29.19-.53.06-.24-.12-1.03-.38-1.97-1.21-.73-.65-1.22-1.45-1.36-1.7-.14-.24-.01-.37.11-.49.11-.11.24-.29.36-.43.12-.15.16-.25.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.36-.77-1.86-.19-.46-.4-.44-.56-.45l-.44-.01Z"/></svg>
 </a>
 
 <!-- Scripts -->
